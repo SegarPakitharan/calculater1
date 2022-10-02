@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CALCULATER</title>
+	<link rel="icon" href="C:\Users\Admin\Documents\GitHub\calculator1\calculator-3.png" type="image/png">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="hompage.css">
+	<link rel="stylesheet" type="text/css" href="media-queries.css">
+	<link rel="stylesheet" type="text/css" href="styl.css">
+	<link rel="stylesheet" type="font/css" href="https://www.fontspace.com/cursed-timer-ulil-font-f29411"
+</head>
+<body>
+	
+	<div class="navigation-wrapper">
+		
+		<div class="left-column">
+			<div class="icon">
+				<img src="phone3.png" width="35px" height="100%">
+			</div>
+			
+			<div class="contact-hours-wrapper">
+			     +94772079957 </br>
+			    
+		    </div>
+		</div> 
+		
+
+		<div class="center-column">
+	        <div class="banner-image">
+			        <img src="RS STUDIO.png" > </br> </br>
+		    </div>
+			
+			<div class="cal">
+				CALCULATER
+			</div>
+            
+			
+            
+		</div>
+
+		<div class="right-column">
+			<div class="address-wrapper">
+			   
+					Kuppilan South, </br>
+			        Kuppilan. 
+			   
+		    </div>
+
+			<div class="icon2">
+				
+				<img src="location.png" width="40px" height="40px">
+				
+			</div>
+		</div>
+	</div>
+
+	
+
+
+	
+	
+	
+
+	<div class="container" >
+		
+	   
+		
+
+		<div class="calculater">
+		    <input type="text" placeholder="PAKI" id="output-screen">
+		    <button onclick="Clear()"> Cl </button>
+	    	<button onclick="del()"> del </button>
+		    <button onclick="display('%')"> % </button>
+		    <button onclick="display('/')"> / </button>
+		    <button onclick="display('7')"> 7</button>
+			<button onclick="display('8')"> 8 </button>
+			<button onclick="display('9')"> 9 </button>
+			<button onclick="display('*')"> *</button>
+			<button onclick="display('4')"> 4</button>
+			<button onclick="display('5')"> 5</button>
+			<button onclick="display('6')"> 6 </button>
+            <button onclick="display('-')"> - </button>
+            <button onclick="display('1')"> 1 </button>
+            <button onclick="display('2')"> 2 </button>
+            <button onclick="display('3')"> 3 </button>
+            <button onclick="display('+')"> + </button>
+            <button onclick="display('.')"> .</button>
+            <button onclick="display('0')"> 0 </button>
+            <button onclick="calculate()" class="equal"> = </button>
+        </div>
+    </div>
+	
+
+    
+
+	
+
+	<div class="footer">
+		
+        <div class="logo-footer">
+			<img src="RS STUDIO.png" alt="logo" width="80px" height="80px">
+
+		</div>
+
+		<div class="footer-phone-hours">
+			<span class="footer-phone-hours">
+			     +94772079957
+			</span>
+
+			
+		</div>
+
+
+
+		
+
+
+		<div class="social-media-icons-wrapper">
+			<a href="#">
+				<img src="instagram.png" alt="logo" width="30px" height="30px">
+			</a>
+
+			<a href="https://www.facebook.com/rs.pakii.1/">
+				<img src="facebook2.png" alt="logo" width="30px" height="30px">
+			</a>
+
+			<a href="https://www.linkedin.com/in/paki-tharan-b6305b1a0/">
+				<img src="linked IN.png" alt="logo" width="30px" height="30px">
+			</a>
+
+
+		</div>
+
+		<div class="copyright-wrapper">
+			&copy; 2022 RS_STUDIO &#124; All right reserved
+
+		</div>
+
+
+	</div>
+
+
+	<script type="text/javascript">
+
+    	let outputScreen = document.getElementById("output-screen");
+    	function display(num){
+
+    		outputScreen.value += num;
+    	}
+
+    	function calculate(){
+
+              try{
+                
+                outputScreen.value=eval(outputScreen.value);
+              }
+              catch(err){
+
+              	alert("Invalid")
+              }
+
+
+
+    	}
+
+
+    	function Clear(){
+
+    		outputScreen.value=' ' ;
+
+           }
+
+
+        function del(){
+        	outputScreen.value= outputScreen.value.slice(0,-1);
+        }
+
+
+    </script>
+</body>
+</html>
